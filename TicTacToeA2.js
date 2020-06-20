@@ -1,4 +1,9 @@
-/* Your Name Here */
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+/* Abhishek Anand */
 
 // TODO document this
 var board = document.getElementsByTagName("td");
@@ -26,12 +31,12 @@ var gameOver = false;
 function resetGame() {
 
     // TODO: document this code from class
-    for ( i = 0; i < board.length; i++) {
+    for (i = 0; i < board.length; i++) {
         board[i].innerHTML = "";
     }
-  
+
     // TODO reset player back to X and update it on the page
-    
+
 
     // TODO reset gameOver and # of empty cells
 }
@@ -51,10 +56,10 @@ function cellClicked(cell) {
     // still in progress!
 
     // TODO: decrease # of empty cells by 1
-  
+
     // TODO: document this code from class
     cell.innerHTML = player;
-    checkWin();    
+    checkWin();
     player = (player === "X") ? "O" : "X";
     document.getElementById("player").innerHTML = player;
 }
@@ -64,11 +69,11 @@ function cellClicked(cell) {
 function checkWin() {
 
     // TODO: document all of the code from class
-    for ( i = 0; i < winSets.length; i++) {
-        if (board[winSets[i][0]].innerHTML == board[winSets[i][1]].innerHTML 
-            && board[winSets[i][1]].innerHTML == board[winSets[i][2]].innerHTML 
-            && board[winSets[i][0]].innerHTML != "") {
-                
+    for (i = 0; i < winSets.length; i++) {
+        if (board[winSets[i][0]].innerHTML == board[winSets[i][1]].innerHTML
+                && board[winSets[i][1]].innerHTML == board[winSets[i][2]].innerHTML
+                && board[winSets[i][0]].innerHTML != "") {
+
             console.log("We have a winner!");
 
             // TODO: replace console.log("We have a winner!") with:
@@ -84,27 +89,27 @@ function checkWin() {
     // - set gameOver variable: game is now over  
     // - display "No one wins! :(" in the winner H3
     // - call displayWin(true) function
-    
+
 }
 
 /* Enhancements you can try:
-- highlight (change background colour) of the cell that was just clicked to indicate that it was the last move; make sure it goes back to the regular background when the next user clicks
-- make the starting player random
-- keep track of statistics (how many times each player wins)
-- hide the "Player X Go!" on startup; show it only while game is playing
-- when a winner is determined, the player information still swaps: would be nice if it didn't (I would
-automatically hide those things before the game starts and when it ends (Week 3))
-- change the font colour of the winning combination (don't forget to change it back when the game is reset)
-*/
+ - highlight (change background colour) of the cell that was just clicked to indicate that it was the last move; make sure it goes back to the regular background when the next user clicks
+ - make the starting player random
+ - keep track of statistics (how many times each player wins)
+ - hide the "Player X Go!" on startup; show it only while game is playing
+ - when a winner is determined, the player information still swaps: would be nice if it didn't (I would
+ automatically hide those things before the game starts and when it ends (Week 3))
+ - change the font colour of the winning combination (don't forget to change it back when the game is reset)
+ */
 
 // ==========================================================================
 // DON'T TOUCH THESE LINES OF CODE  (we'll learn this stuff in a later lesson)
 document.getElementById("reset").addEventListener("click", resetGame);
-document.getElementById("message").addEventListener("click", function() {
+document.getElementById("message").addEventListener("click", function () {
     displayWin(false);
 });
-for ( i = 0; i < board.length; i++) {
-    document.getElementsByTagName("td")[i].addEventListener("click", function() {
+for (i = 0; i < board.length; i++) {
+    document.getElementsByTagName("td")[i].addEventListener("click", function () {
         cellClicked(this);
     });
 }
@@ -122,3 +127,4 @@ function displayWin(show) {
 }
 
 // ===============================================================
+
