@@ -43,7 +43,7 @@ td:last-child {
     border: 1px solid #660066;
     border-radius: 5px;
     box-shadow: 1px 1px 5px black, -1px -1px 5px white;
-    display: none;
+    display: none; /*to change*/ 
     font-weight: bold;
     height: 30%;
     margin: 0 auto;
@@ -57,7 +57,7 @@ td:last-child {
 /* covers the entire page in a semi-transparent grey, hidden by default */
 #overlay {
     background-color: rgba(20, 20, 20, 0.4);
-    display: none;
+    display: none;  /*to change*/
     height: 100%;
     left: 0;
     position: fixed;

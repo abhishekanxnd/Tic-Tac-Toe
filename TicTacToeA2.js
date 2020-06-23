@@ -23,7 +23,7 @@ var gameOver = false;
  4. resets the number of empty cells to 9
  5. sets the game over flag to false to indicate that the game is in progress
  */
-function resetGame() {
+function resetGame() {//1 1
 
     // TODO: document this code from class
     for (i = 0; i < board.length; i++) {
@@ -31,9 +31,12 @@ function resetGame() {
     }
 
     // TODO reset player back to X and update it on the page
-
+    player = "X";
+    
 
     // TODO reset gameOver and # of empty cells
+    gameOver = false;
+    empty = 9;
 }
 
 /* Function cellClicked() is called
