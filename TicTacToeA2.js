@@ -53,14 +53,15 @@ function cellClicked(cell) {
 
     //TODO: 1-5 should occur only when the selected cell is empty and the game is 
     // still in progress!
-    
+    if(gameOver == false && /*changing this*/empty == 9) {
     // TODO: decrease # of empty cells by 1
-
+    empty--;
     // TODO: document this code from class
     cell.innerHTML = player;
     checkWin();
     player = (player === "X") ? "O" : "X";
     document.getElementById("player").innerHTML = player;
+    }
 }
 
 /* Function checkWin() is called to check all winning combinations and display results
@@ -77,17 +78,27 @@ function checkWin() {
 
             // TODO: replace console.log("We have a winner!") with:
             //  - set gameOver variable: game is now over  
+                gameOver = true;
             //  - display "X Wins!" or "O Wins!" in the winner H3
+                document.getElementById("winner").innerHTML = player + " wins!";
             //  - call displayWin(true) function
+                displayWin(true);
             //  - break out of this loop: no point in continuing
+                break;
         }
     }
 
     // TODO: if there are no empty cells left and game is not yet over,
     //       it means that there is no winner for this game
-    // - set gameOver variable: game is now over  
+        if(empty == 0 && gameOver == false) {
+            console.log("no winner yet");
+        }
+    // - set gameOver variable: game is now over 
+        gameOver = true;
     // - display "No one wins! :(" in the winner H3
+        document.getElementById("winner").innerHTML = "No one wins! :(";
     // - call displayWin(true) function
+        displayWin(true);
 
 }
 
