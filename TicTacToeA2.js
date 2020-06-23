@@ -32,6 +32,7 @@ function resetGame() {//1 1
 
     // TODO reset player back to X and update it on the page
     player = "X";
+    document.getElementById("player").innerHTML = player;
     
 
     // TODO reset gameOver and # of empty cells
@@ -52,7 +53,7 @@ function cellClicked(cell) {
 
     //TODO: 1-5 should occur only when the selected cell is empty and the game is 
     // still in progress!
-
+    
     // TODO: decrease # of empty cells by 1
 
     // TODO: document this code from class
