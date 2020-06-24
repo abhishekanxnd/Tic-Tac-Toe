@@ -53,7 +53,7 @@ function cellClicked(cell) {
 
     //TODO: 1-5 should occur only when the selected cell is empty and the game is 
     // still in progress!
-    if(gameOver == false && /*changing this*/empty == 9) {
+    if(gameOver == false && /*changing this*/board[cell]==0) {
     // TODO: decrease # of empty cells by 1
     empty--;
     // TODO: document this code from class
@@ -90,9 +90,9 @@ function checkWin() {
     
     // TODO: if there are no empty cells left and game is not yet over,
     //       it means that there is no winner for this game
-        /*if(empty == 0 && gameOver == false) {
+        if(empty == 0 && gameOver == false) {
             console.log("no winner yet");
-        }*/
+        }
     // - set gameOver variable: game is now over 
         gameOver = true;
     // - display "No one wins! :(" in the winner H3
