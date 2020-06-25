@@ -53,7 +53,7 @@ function cellClicked(cell) {
 
     //TODO: 1-5 should occur only when the selected cell is empty and the game is 
     // still in progress!
-    if (gameOver == false || /*changing this*/ cell.innerHTML == "") {
+    if (gameOver == false && cell.innerHTML == "") {
         // TODO: decrease # of empty cells by 1
         empty--;
         // TODO: document this code from class
